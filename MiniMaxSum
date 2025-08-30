@@ -7,12 +7,12 @@ The minimum sum is  and the maximum sum is . The function prints
 16 24
 
 void miniMaxSum(int arr_count, int* arr) {
-    int max = arr[0], min = arr[0], sum = arr[0];
+    long long max = arr[0], min = arr[0], sum = arr[0];
     for (int i = 1; i < 5; i++)
     {
         if (max < arr[i]) max=arr[i];
         if (min > arr[i]) min=arr[i];
         sum+=arr[i];      
     }
-    printf("%d %d", (sum-max), (sum-min));
+    printf("%lld %lld", (sum-max), (sum-min));
 }
