@@ -1,0 +1,20 @@
+/*
+ * Complete the 'diagonalDifference' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts 2D_INTEGER_ARRAY arr as parameter.
+ */
+
+int diagonalDifference(int arr_rows, int arr_columns, int** arr) {
+    int diag1 = 0, diag2 = 0;
+    for (int i = 0; i < arr_rows; i++)
+    {
+        diag1+=arr[i][i];
+    }
+    for (int i = 0; i < arr_columns; i++)
+    {
+        diag2+=arr[i][arr_columns-1-i];
+    }
+    
+    return fabs(diag1-diag2);
+}
